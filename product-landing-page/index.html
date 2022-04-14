@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Product Landing Page</title>
+</head>
+<body>
+    <header id="header">
+        <div class= "logo"><img id="header-img" src="assets/logo.png" alt="" width = 100px;></div>
+        <nav id="nav-bar">
+          <ul>
+            <li><a class="nav-link" href="#features">Features</a></li>
+            <li><a class="nav-link" href="#how-it-works">How it works</a></li>
+            <li><a class="nav-link" class="nav-link" href="#pricing">Pricing</a></li>
+        </nav>
+      </header>
+        <section id="hero">
+          <h2>Unlimited movies, TV shows, and more.</h2>
+          <p>Watch anywhere. Cancel anytime.</p>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <div class="bat-form"><input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="Enter your email address"
+              required/>
+            <input id="submit" type="submit" value="Get Started" class="btn"/>
+          </form>
+            </div>
+        </section>
+          <section id="features">
+            <div class="grid">
+              <div class="icon"><img src="assets/features1.png" alt="" width = 100px;></div>
+              <div class="desc">
+                <h2>Two-Face Privilege</h2>
+                <p>
+                  Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+                </p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="icon"><img src="assets/features2.png" alt="" width = 75px;></div>
+              <div class="desc">
+                <h2>Bat Signal is Visible Everywhere</h2>
+                <p>
+                  Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.
+                </p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="icon">
+                <img src="assets/features3.png" alt="" width = 100px;></div>
+              <div class="desc">
+                <h2>Joker and Harley Relationship</h2>
+                <p>
+                  Watch together. Or watch separately.
+      With one account you can all enjoy your own films.
+                </p>
+              </div>
+            </div>
+          </section>
+        <section id="how-it-works">
+            <iframe
+              id="video"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/mJd4ti_nkI0?rel=0&amp;controls=0&amp;showinfo=0"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </section>
+        <section id="pricing">
+            <div class="product" id="tenor">
+              <div class="level">James Gordon <br>Basic</div>
+              <div class="price">
+              <h2>$8.99</h2>
+              <ol>
+                <li>Number of screens you can watch on at the same time: 1</li>
+                <li>Number of phones or tablets you can have downloads on: 1</li>
+                <li>Unlimited movies and TV shows</li>
+                <li>Watch on your laptop, TV, phone and tablet</li>
+                <br>
+                <br>
+              </ol>
+              </div>
+              <button class="buy-btn gordon">Select</button>
+            </div>
+            <div class="product" id="bass">
+              <div class="level">Robin <br>Standart</div>
+              <div class="price">
+              <h2>$13.99</h2>
+              <ol>
+                <li>Number of screens you can watch on at the same time: 2</li>
+                <li>Number of phones or tablets you can have downloads on: 2</li>
+                <li>Unlimited movies and TV shows</li>
+                <li>Watch on your laptop, TV, phone and tablet</li>
+                <li>HD available</li>
+                <br>
+              </ol>
+              </div>
+              <button class="buy-btn robin">Select</button>
+            </div>
+            <div class="product" id="valve">
+              <div class="level">Batman <br>Premium</div>
+              <div class="price">
+              <h2>$17.99</h2>
+              <ol>
+                <li>Number of screens you can watch on at the same time: 4</li>
+                <li>Number of phones or tablets you can have downloads on: 4</li>
+                <li>Unlimited movies and TV shows</li>
+                <li>Watch on your laptop, TV, phone and tablet</li>
+                <li>HD available</li>
+                <li>Ultra HD available</li>
+              </ol>
+              </div>
+              <button class="buy-btn batman">Select</button>
+            </div>
+          </section>
+        <footer>
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <span>Batflix, Copyright 2021</span>
+          </footer>
+</body>
+</html>
