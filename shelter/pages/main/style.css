@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  background: url("./../../assets/images/noise_transparent@2x.png"),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+  background-attachment: fixed;
+}
+
+.white-section {
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header-container {
+  padding: 40px 60px;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-navigation {
+  width: 443px;
+  height: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.logo h1 {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+}
+.logo p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+.header-navigation li {
+  background: none;
+  border-style: none;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #fafafa;
+}
+.header-navigation a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.start-container {
+  display: flex;
+}
+.start-text {
+  margin: 0;
+  margin-top: 163px;
+}
+.start-text h2 {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.start-text p {
+  margin: 0;
+  margin-top: 42px;
+  margin-bottom: 42px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  color: #cdcdcd;
+}
+.start-button {
+  position: relative;
+  width: 207px;
+  height: 52px;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  color: #292929;
+  background: #f1cdb3;
+  border-radius: 100px;
+}
+.start-button a {
+  text-decoration: none;
+  color: inherit;
+}
+.about-container {
+  padding: 80px 40px 100px 40px;
+  display: flex;
+}
+.about-img {
+  padding-left: 175px;
+  padding-right: 120px;
+}
