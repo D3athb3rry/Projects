@@ -17,24 +17,32 @@
       <div class="logo">
         <img src="assets/svg/Logo.svg" alt="logo">
       </div>
-      <div>
-        <nav>
-          <ul class="header-navigation">
-            <li><a href="#visiting-section">Visiting</a></li>
-            <li><a href="#explore-section">Explore</a></li>
-            <li><a href="#video-section">Video</a></li>
-            <li><a href="#gallery-section">Gallery</a></li>
-            <li><a href="#tickets-section">Tickets</a></li>
-            <li><a href="#contacts-section">Contacts</a></li>
+      <div class="header-sidebar">
+        <nav class="header-nav">
+          <input type="checkbox" class= "header-nav-checkbox" id="header-nav-checkbox">
+          <label class="nav-label" for="header-nav-checkbox">
+              <svg id="nav-btn">
+                <use href="#nav-open"></use>
+              </svg>
+              <svg id="nav-cancel">
+                <use href="#nav-exit"></use>
+              </svg>
+          </label>
+          <ul class="header-navigation-items">
+            <li class="nav-item"><a href="#visiting-section">Visiting</a></li>
+            <li class="nav-item"><a href="#explore-section">Explore</a></li>
+            <li class="nav-item"><a href="#video-section">Video</a></li>
+            <li class="nav-item"><a href="#gallery-section">Gallery</a></li>
+            <li class="nav-item"><a href="#tickets-section">Tickets</a></li>
+            <li class="nav-item"><a href="#contacts-section">Contacts</a></li>
           </ul>
         </nav>
       </div>
-    </div>
   </header>
   <main>
     <section class="welcome-section black-section" id="welcome-section">
       <div class="container welcome-container">
-        <div class="welcome-text">
+        <div class="welcome-text" id="welcome-text">
           <h1>WELCOME<br>TO THE LOUVRE</h1>
           <h2>From the castle to the museum</h2>
           <div class="welcome-button">
@@ -298,7 +306,7 @@
                     <div class="booking-tickets">
                       <div class="booking-tickets-title">
                         <h3>Booking tickets</h3>
-                        <p>Tour to Louvre</p>
+                        <h4>Tour to Louvre</h4>
                       </div>
                       <form class=booking-form>
                         <div class="elem-group inlined">
@@ -332,8 +340,8 @@
                             <option value="adjacent">Combined Admission</option>
                           </select>
                         </div>
-                        <div class="elem-group">
-                          <p>Entry Ticket</p>
+                        <div class="elem-group tickets-amount-modal">
+                          <h4>Entry Ticket</h4>
                           <div class="tickets-basic-modal">
                             <p>Basic 18+</p>
                             <div class="tickets-basic-modal-amount">
@@ -351,10 +359,11 @@
                             </div>
                           </div>
                         </div>
-                        <button type="submit">Book The Rooms</button>
                       </form>
                     </div>
-                    <div class="booking-overview"></div>
+                    <div class="booking-overview">
+
+                    </div>
                   </div>
                 </div>
               </div>
@@ -383,7 +392,7 @@
         </div>
       </div>
     </section>
-    <!-- <footer>
+    <footer>
       <div class="container footer-container">
         <div class="footer-logo">
           <img src="assets/svg/Logo.svg" alt="logo">
@@ -418,11 +427,22 @@
           <p class="footer-username">d3athb3rry</p>
         </div>
       </div>
-    </footer> -->
+    </footer>
   </main>
 
   <svg style="display: none">
     <defs>
+      <symbol id="nav-open" viewBox="0 0 32 18">
+        <rect width="32" height="2" fill="white"/>
+        <rect y="8" width="32" height="2" fill="white"/>
+        <rect y="16" width="32" height="2" fill="white"/>
+      </symbol>
+
+      <symbol id="nav-exit" viewBox="0 0 25 25">
+        <rect width="33.2612" height="2.07882" transform="matrix(0.7068 0.707413 -0.7068 0.707413 1.47046 0)" fill="white"/>
+        <rect width="33.2612" height="2.07883" transform="matrix(0.707413 -0.706801 0.707413 0.706801 0 23.5093)" fill="white"/>
+      </symbol>
+
       <symbol id="pause" viewBox="0 0 21 30">
         <path
           d="M8 29.0471V0.944802C8 0.421605 7.55026 0 6.98347 0H1.01653C0.449742 0 0 0.421605 0 0.944802V29.0471C0 29.5703 0.449742 30 1.01653 30H6.98347C7.55026 30 8 29.5784 8 29.0471Z">
@@ -471,7 +491,6 @@
         <path
           d="M18.3326 0C17.8816 0 17.4905 0.156374 17.1604 0.469123L8.48928 8.68426H1.66737C1.21531 8.68426 0.825273 8.84064 0.495164 9.15339C0.165055 9.46614 0 9.83665 0 10.2639V19.7361C0 20.1633 0.165055 20.5339 0.495164 20.8466C0.825273 21.1594 1.21636 21.3157 1.66737 21.3157H8.48928L17.1604 29.5309C17.4905 29.8436 17.8806 30 18.3326 30C18.7847 30 19.1747 29.8436 19.5048 29.5309C19.8349 29.2181 20 28.8486 20 28.4203V1.57968C20 1.15239 19.8349 0.781873 19.5059 0.469123C19.1768 0.156374 18.7857 0 18.3337 0H18.3326Z">
         </path>
-
       </symbol>
 
       <symbol id="fullscreen" viewBox="0 0 36 36">
@@ -488,7 +507,6 @@
       </symbol>
     </defs>
   </svg>
-
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="assets/js/swiper.js"></script>
   <script src="assets/js/explore-picture.js"></script>
