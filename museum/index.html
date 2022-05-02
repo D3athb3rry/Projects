@@ -19,15 +19,6 @@
       </div>
       <div class="header-sidebar">
         <nav class="header-nav">
-          <input type="checkbox" class= "header-nav-checkbox" id="header-nav-checkbox">
-          <label class="nav-label" for="header-nav-checkbox">
-              <svg id="nav-btn">
-                <use href="#nav-open"></use>
-              </svg>
-              <svg id="nav-cancel">
-                <use href="#nav-exit"></use>
-              </svg>
-          </label>
           <ul class="header-navigation-items">
             <li class="nav-item"><a href="#visiting-section">Visiting</a></li>
             <li class="nav-item"><a href="#explore-section">Explore</a></li>
@@ -36,6 +27,86 @@
             <li class="nav-item"><a href="#tickets-section">Tickets</a></li>
             <li class="nav-item"><a href="#contacts-section">Contacts</a></li>
           </ul>
+        </nav>
+      </div>
+      <div class="header-mobile-sidebar">
+        <nav class="header-mobile-nav">
+          <input onchange="toggleBodyScroll()" type="checkbox" class="header-mobile-nav-checkbox"
+            id="header-mobile-nav-checkbox">
+          <label class="mobile-nav-label" for="header-mobile-nav-checkbox">
+            <svg id="mobile-nav-btn">
+              <use href="#mobile-nav-open"></use>
+            </svg>
+            <svg id="mobile-nav-cancel">
+              <use href="#mobile-nav-exit"></use>
+            </svg>
+          </label>
+          <div class="header-mobile-navigation-items">
+            <div class="mobile-logo">
+              <img src="assets/svg/Logo.svg" alt="logo">
+            </div>
+            <ul>
+              <li class="mobile-nav-item">
+                <a onclick="goToAnchor()" href="#visiting-section">Visiting
+                  <svg>
+                    <use href="#mobile-nav-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-nav-item">
+                <a onclick="goToAnchor()" href="#explore-section">Explore
+                  <svg>
+                    <use href="#mobile-nav-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-nav-item">
+                <a onclick="goToAnchor()" href="#video-section">Video
+                  <svg>
+                    <use href="#mobile-nav-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-nav-item">
+                <a onclick="goToAnchor()" href="#gallery-section">Gallery
+                  <svg>
+                    <use href="#mobile-nav-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-nav-item">
+                <a onclick="goToAnchor()" href="#tickets-section">Tickets
+                  <svg>
+                    <use href="#mobile-nav-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-nav-item">
+                <a onclick="goToAnchor()" href="#contacts-section">Contacts
+                  <svg>
+                    <use href="#mobile-nav-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="mobile-nav-img">
+              <div class ="mobile-nav-img-1"><img src="assets/img/Nav/nav1.jpg" alt=""></div>
+              <div class ="mobile-nav-img-2"><img src="assets/img/Nav/nav2.jpg" alt=""></div>
+              <div class ="mobile-nav-img-3"><img src="assets/img/Nav/nav3.jpg" alt=""></div>
+            </div>
+            <div class="mobile-social">
+              <ul>
+                <li class="social-icon youtube"><a href="https://www.youtube.com/user/louvre" target="_blank"></a></li>
+                <li class="social-icon instagram"><a href="https://www.instagram.com/museelouvre/" target="_blank"></a>
+                </li>
+                <li class="social-icon facebook"><a href="https://www.facebook.com/museedulouvre" target="_blank"></a>
+                </li>
+                <li class="social-icon twitter"><a href="http://twitter.com/museelouvre" target="_blank"></a></li>
+                <li class="social-icon pinterest"><a href="https://www.pinterest.fr/museedulouvre/" target="_blank"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
   </header>
@@ -376,7 +447,7 @@
       <div class="parallax-container">
       </div>
     </section>
-    <section class="contacts white-section" id="contacts">
+    <section class="contacts white-section" id="contacts-section">
       <div class="container contacts-container">
         <h2>Contacts</h2>
         <div class="contacts-block">
@@ -432,17 +503,24 @@
 
   <svg style="display: none">
     <defs>
-      <symbol id="nav-open" viewBox="0 0 32 18">
-        <rect width="32" height="2" fill="white"/>
-        <rect y="8" width="32" height="2" fill="white"/>
-        <rect y="16" width="32" height="2" fill="white"/>
+      <symbol id="mobile-nav-open" viewBox="0 0 32 18">
+        <rect width="32" height="2" fill="white" />
+        <rect y="8" width="32" height="2" fill="white" />
+        <rect y="16" width="32" height="2" fill="white" />
       </symbol>
 
-      <symbol id="nav-exit" viewBox="0 0 25 25">
-        <rect width="33.2612" height="2.07882" transform="matrix(0.7068 0.707413 -0.7068 0.707413 1.47046 0)" fill="white"/>
-        <rect width="33.2612" height="2.07883" transform="matrix(0.707413 -0.706801 0.707413 0.706801 0 23.5093)" fill="white"/>
+      <symbol id="mobile-nav-exit" viewBox="0 0 25 25">
+        <rect width="33.2612" height="2.07882" transform="matrix(0.7068 0.707413 -0.7068 0.707413 1.47046 0)"
+          fill="white" />
+        <rect width="33.2612" height="2.07883" transform="matrix(0.707413 -0.706801 0.707413 0.706801 0 23.5093)"
+          fill="white" />
       </symbol>
 
+      <symbol id="mobile-nav-arrow" viewBox="0 0 12 12">
+        <path
+          d="M9.33352 5.53176L3.99337 0.191706C3.86985 0.068097 3.70498 0 3.52917 0C3.35337 0 3.18849 0.068097 3.06498 0.191706L2.67172 0.584873C2.41582 0.841066 2.41582 1.25745 2.67172 1.51326L7.15597 5.99751L2.66674 10.4867C2.54323 10.6104 2.47504 10.7751 2.47504 10.9508C2.47504 11.1267 2.54323 11.2915 2.66674 11.4152L3.06001 11.8083C3.18362 11.9319 3.3484 12 3.5242 12C3.7 12 3.86488 11.9319 3.98839 11.8083L9.33352 6.46336C9.45732 6.33936 9.52532 6.1738 9.52493 5.99781C9.52532 5.82112 9.45732 5.65566 9.33352 5.53176Z"
+          fill="white" />
+      </symbol>
       <symbol id="pause" viewBox="0 0 21 30">
         <path
           d="M8 29.0471V0.944802C8 0.421605 7.55026 0 6.98347 0H1.01653C0.449742 0 0 0.421605 0 0.944802V29.0471C0 29.5703 0.449742 30 1.01653 30H6.98347C7.55026 30 8 29.5784 8 29.0471Z">
@@ -507,6 +585,25 @@
       </symbol>
     </defs>
   </svg>
+  <script>
+    function toggleBodyScroll() {
+      let body = document.getElementsByTagName("body")[0];
+
+      if (body.classList.contains("no-scroll")) {
+        body.classList.remove("no-scroll");
+      } else {
+        body.classList.add("no-scroll");
+      }
+    }
+
+    function goToAnchor() {
+      let body = document.getElementsByTagName("body")[0];
+      let checkbox = document.getElementById("header-mobile-nav-checkbox");
+
+      body.classList.remove("no-scroll");
+      checkbox.checked = false;
+    }
+  </script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="assets/js/swiper.js"></script>
   <script src="assets/js/explore-picture.js"></script>
@@ -516,4 +613,4 @@
   <script src="assets/js/modal.js"></script>
 </body>
 
-</html>
+</html>`
