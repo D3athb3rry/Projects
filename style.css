@@ -216,7 +216,7 @@ header {
 
 .welcome-container .swiper-buttons {
   position: relative;
-  width: 80px;
+  width: 120px;
   display: flex;
   justify-content: space-between;
 }
@@ -226,8 +226,8 @@ header {
 }
 
 .welcome-container .swiper-pagination {
-  width: 180px;
-  padding: 25px 25px;
+  /* width: 180px;
+  padding: 25px 25px; */
   position: revert;
 }
 
@@ -238,8 +238,20 @@ header {
   height: 16px;
   opacity: 1;
 }
+
 .welcome-container .swiper-pagination-bullet-active {
   background-color: #d2b183;
+}
+
+.welcome-container
+  .swiper-horizontal
+  > .welcome-container
+  .swiper-pagination-bullets
+  .swiper-pagination-bullet,
+.welcome-container
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin-right: 25px;
 }
 
 .welcome-container .welcome-swiper-prev {
@@ -342,12 +354,16 @@ header {
   cursor: pointer;
   text-decoration: none;
 }
+.visit-card img {
+  width: 100%;
+  height: auto;
+}
 .visit-card:after {
   display: block;
   position: absolute;
   left: 0;
   bottom: 27.5%;
-  width: 300px;
+  width: 65%;
   height: 2px;
   background-color: var(--dark-red);
   content: "";
@@ -985,7 +1001,6 @@ video {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  padding-left: 13px;
 }
 .tickets-basic-amount,
 .tickets-senior-amount {
@@ -1105,7 +1120,7 @@ video {
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 80%;
+  width: 85%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -1150,76 +1165,174 @@ video {
   background-color: var(--dark-red);
   position: relative;
 }
-
+/* .booking-form {
+  display: flex;
+  flex-direction: column;
+} */
 .booking-form div.elem-group {
   margin: 20px 0;
 }
 
 .booking-form div.elem-group.inlined {
-  width: 49%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 45px;
+}
+.booking-form div.elem-group.inlined input {
   display: inline-block;
-  float: left;
-  margin-left: 1%;
+  width: 190px;
+  height: 100%;
 }
 
-.booking-form label {
-  display: block;
-  font-family: "Nanum Gothic";
-  padding-bottom: 10px;
-  font-size: 1.25em;
-}
 
 .booking-form input,
-.booking-form select,
-.booking-form textarea {
-  border-radius: 2px;
-  border: 2px solid black;
+.booking-form select {
+  border: 1px solid black;
   box-sizing: border-box;
-  font-size: 1.25em;
-  font-family: Nanum Gothic;
   width: 100%;
   padding: 10px;
 }
 
 .booking-form div.elem-group.inlined input {
-  /* width: 95%; */
   display: inline-block;
 }
 
-.booking-form textarea {
-  height: 250px;
-}
-
 .tickets-amount-modal .number {
-  all: unset;
-  width: 33px;
+  box-sizing: border-box;
+  border: solid 1px black;
+  width: calc(100% / 3);
+  height: 25px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  padding-left: 13px;
+  -webkit-appearance: none;
 }
 
+.booking-form input, 
+.booking-form input::placeholder,
+.booking-form select {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="date"]::-webkit-calendar-picker-indicator, input[type="time"]::-webkit-calendar-picker-indicator {
+  background: url(assets/modal/arrow.png) no-repeat;
+  cursor: pointer;
+}
+input[type="date"]::before, input[type="time"]::before { 
+  content: attr(data-placeholder);
+  width: 100%;
+  text-indent: 25px;
+}
+
+.booking-form input:focus::placeholder {
+  color: transparent;
+}
+
+input[type="date"]:valid::before,
+input[type="time"]:valid::before
+ {
+  display: none 
+}
+
+#date {
+  background-image: url(assets/modal/date.png);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+}
+
+#time {
+  background-image: url(assets/modal/time.png);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+}
+
+#name {
+  background-image: url(assets/modal/name.png);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  text-indent: 25px;
+}
+#email {
+  background-image: url(assets/modal/email.png);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  text-indent: 25px;
+}
+#phone {
+  background-image: url(assets/modal/tel.png);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  text-indent: 25px;
+}
+
+*:focus {
+  outline: none;
+}
+
+#room-selection {
+  background: url(assets/modal/arrow.png) no-repeat right;
+  background-position-x: 365px;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.tickets-amount-modal {
+  border: solid 1px var(--bg-dark);
+  padding: 10px;
+}
+
+.tickets-basic-modal,
+.tickets-senior-modal {
+  padding: 15px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.tickets-basic-modal p,
+.tickets-senior-modal p {
+  display: inline-block;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
 .tickets-basic-modal-amount,
 .tickets-senior-modal-amount {
   width: 105px;
-  display: flex;
-  border: solid 1px black;
   height: 25px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .tickets-basic-modal button,
 .tickets-senior-modal button {
+  display: block;
   outline: none;
+  outline-width: 0;
   -webkit-appearance: none;
   background-color: transparent;
   border: none;
   align-items: center;
   justify-content: center;
-  width: 36px;
+  width: calc(100% / 3);
   height: 25px;
   cursor: pointer;
   margin: 0;
@@ -1467,10 +1580,6 @@ footer {
   .header-sidebar {
     display: none;
   }
-
-  .mobile-logo {
-    display: none;
-  }
   .mobile-nav-img {
     display: none;
   }
@@ -1552,6 +1661,52 @@ footer {
     height: 12px;
   }
 
+  .visit-card:after {
+    left: 0;
+    bottom: 19.5%;
+  }
+
+  .visit-card {
+    width: 330px;
+    height: 345px;
+  }
+  .card-title {
+    margin: 0;
+    margin-top: 25px;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--black);
+    transition: 0.35s linear;
+    cursor: pointer;
+  }
+
+  .card-subtitle {
+    margin: 0;
+    margin-top: 22px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--black);
+  }
+  .card-text {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--black);
+  }
+
   .explore-container {
     display: flex;
     flex-direction: column;
@@ -1611,12 +1766,50 @@ footer {
   }
   .header-container {
     min-height: 110px;
-  }
-  .mobile-logo {
-    display: block;
+    z-index: 100;
   }
   .header-sidebar {
     display: none;
+  }
+
+  .mobile-social {
+    display: block;
+  }
+
+  .mobile-nav-label #mobile-nav-btn {
+    display: block;
+  }
+
+  .header-mobile-navigation-items {
+    overflow-y: scroll;
+    padding-left: 20px;
+    position: fixed;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    top: -150%;
+    left: 0;
+    background-color: var(--bg-dark);
+    text-align: left;
+    transition: all 0.5s;
+  }
+  .header-mobile-navigation-items li {
+    margin-left: 30px;
+    display: block;
+  }
+
+  .header-mobile-nav-checkbox:checked ~ .header-mobile-navigation-items {
+    top: 110px;
+    left: 0;
+  }
+
+  .header-mobile-nav-checkbox:checked ~ .mobile-nav-label #mobile-nav-btn {
+    display: none;
+  }
+  .header-mobile-nav-checkbox:checked ~ .mobile-nav-label #mobile-nav-cancel {
+    display: block;
   }
   .mobile-nav-img {
     display: grid;
@@ -1637,48 +1830,59 @@ footer {
     grid-area: 2 / 2 / 3 / 3;
   }
 
-  .mobile-social {
-    display: block;
-  }
-
-  .mobile-nav-label #mobile-nav-btn {
-    display: block;
-  }
-
-  .header-mobile-navigation-items {
-    overflow-y: scroll;
-    padding-left: 20px;
-    position: fixed;
-    justify-content: space-around;
-    align-items: flex-start;
+  .welcome-container {
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    top: 0;
-    height: 100vh;
-    left: -100%;
-    background-color: var(--bg-dark);
-    text-align: left;
-    transition: all 0.5s;
-  }
-  .header-mobile-navigation-items li {
-    margin-left: 30px;
-    display: block;
+    justify-content: center;
+    align-items: center;
   }
 
-  .header-mobile-nav-checkbox:checked ~ .header-mobile-navigation-items {
-    left: 0;
+  .welcome-section h1 {
+    padding-top: 0px;
+    font-size: 40px;
+    text-align: center;
+  }
+  .welcome-section h2 {
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    text-align: center;
   }
 
-  .header-mobile-nav-checkbox:checked ~ .mobile-nav-label #mobile-nav-btn {
+  .welcome-button {
     display: none;
   }
-  .header-mobile-nav-checkbox:checked ~ .mobile-nav-label #mobile-nav-cancel {
-    display: block;
+
+  .welcome-container .swiper-container {
+    width: 728px;
+    height: 546px;
   }
-  .header-mobile-nav-checkbox:checked ~ .mobile-nav-label {
-    z-index: 50;
-    position: fixed;
-    top: 42px;
-    right: 20px;
+
+  .welcome-container .swiper-controls {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .welcome-container .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+
+  .explore-text p {
+    display: none;
+  }
+  .picture-inner-container {
+    line-height: 36px;
+    row-gap: 24px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    column-gap: 24px;
+    -webkit-column-gap: 24px;
+    -moz-column-gap: 24px;
+  }
+  .tickets-image img {
+    width: 444px;
+    height: 340px;
   }
 }

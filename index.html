@@ -42,9 +42,6 @@
             </svg>
           </label>
           <div class="header-mobile-navigation-items">
-            <div class="mobile-logo">
-              <img src="assets/svg/Logo.svg" alt="logo">
-            </div>
             <ul>
               <li class="mobile-nav-item">
                 <a onclick="goToAnchor()" href="#visiting-section">Visiting
@@ -139,8 +136,8 @@
             </div>
             <div class="welcome-pagination swiper-pagination"></div>
             <div class="swiper-buttons">
-              <div class="welcome-swiper-next swiper-button-next"></div>
               <div class="welcome-swiper-prev swiper-button-prev"></div>
+              <div class="welcome-swiper-next swiper-button-next"></div>
             </div>
           </div>
         </div>
@@ -376,34 +373,29 @@
                   <div class="booking">
                     <div class="booking-tickets">
                       <div class="booking-tickets-title">
+                        <img src="assets/modal/logo.png" alt="modal-logo">
                         <h3>Booking tickets</h3>
                         <h4>Tour to Louvre</h4>
                       </div>
                       <form class=booking-form>
                         <div class="elem-group inlined">
-                          <label for="checkin-date">Date</label>
-                          <input type="date" id="checkin-date" name="checkin" required>
+                          <input type="date" id="date" name="date" data-placeholder="Date" required>
+                          <input type="time" id="time" name="time" data-placeholder="Time" required>
                         </div>
-                        <div class="elem-group inlined">
-                          <label for="checkout-date">Time</label>
-                          <input type="date" id="checkout-date" name="checkout" required>
-                        </div>
+                        <!-- <div class="elem-group inlined">
+                        </div> -->
                         <div class="elem-group">
-                          <!-- <label for="name">Name</label> -->
                           <input type="text" id="name" name="visitor_name" placeholder="Name" pattern=[A-Z\sa-z]{3,20}
                             required>
                         </div>
                         <div class="elem-group">
-                          <!-- <label for="email">E-mail</label> -->
                           <input type="email" id="email" name="visitor_email" placeholder="E-mail" required>
                         </div>
                         <div class="elem-group">
-                          <!-- <label for="phone">Phone</label> -->
                           <input type="tel" id="phone" name="visitor_phone" placeholder="Phone"
                             pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
                         </div>
                         <div class="elem-group">
-                          <label for="room-selection">Ticket Type</label>
                           <select id="room-selection" name="room_preference" required>
                             <option value="">Ticket Type</option>
                             <option value="connecting">Permanent exhibition</option>
@@ -414,7 +406,7 @@
                         <div class="elem-group tickets-amount-modal">
                           <h4>Entry Ticket</h4>
                           <div class="tickets-basic-modal">
-                            <p>Basic 18+</p>
+                            <p>Basic 18+ (20 €)</p>
                             <div class="tickets-basic-modal-amount">
                               <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
                               <input type="number" min="0" max="20" value="1" readonly class="number">
@@ -422,7 +414,7 @@
                             </div>
                           </div>
                           <div class="tickets-senior-modal">
-                            <p>Senior 65+</p>
+                            <p>Senior 65+ (10 €)</p>
                             <div class="tickets-senior-modal-amount">
                               <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
                               <input type="number" min="0" max="20" value="1" readonly class="number">
