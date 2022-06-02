@@ -87,9 +87,9 @@
               </li>
             </ul>
             <div class="mobile-nav-img">
-              <div class ="mobile-nav-img-1"><img src="assets/img/Nav/nav1.jpg" alt=""></div>
-              <div class ="mobile-nav-img-2"><img src="assets/img/Nav/nav2.jpg" alt=""></div>
-              <div class ="mobile-nav-img-3"><img src="assets/img/Nav/nav3.jpg" alt=""></div>
+              <div class="mobile-nav-img-1"><img src="assets/img/Nav/nav1.jpg" alt=""></div>
+              <div class="mobile-nav-img-2"><img src="assets/img/Nav/nav2.jpg" alt=""></div>
+              <div class="mobile-nav-img-3"><img src="assets/img/Nav/nav3.jpg" alt=""></div>
             </div>
             <div class="mobile-social">
               <ul>
@@ -382,8 +382,6 @@
                           <input type="date" id="date" name="date" data-placeholder="Date" required>
                           <input type="time" id="time" name="time" data-placeholder="Time" required>
                         </div>
-                        <!-- <div class="elem-group inlined">
-                        </div> -->
                         <div class="elem-group">
                           <input type="text" id="name" name="visitor_name" placeholder="Name" pattern=[A-Z\sa-z]{3,20}
                             required>
@@ -396,11 +394,11 @@
                             pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
                         </div>
                         <div class="elem-group">
-                          <select id="room-selection" name="room_preference" required>
+                          <select id="ticket-type" name="room_preference" required>
                             <option value="">Ticket Type</option>
-                            <option value="connecting">Permanent exhibition</option>
-                            <option value="adjoining">Temporary exhibition</option>
-                            <option value="adjacent">Combined Admission</option>
+                            <option value="permanent">Permanent exhibition</option>
+                            <option value="temporary">Temporary exhibition</option>
+                            <option value="combined">Combined Admission</option>
                           </select>
                         </div>
                         <div class="elem-group tickets-amount-modal">
@@ -425,7 +423,72 @@
                       </form>
                     </div>
                     <div class="booking-overview">
+                      <div class="overview-info">
+                        <h3>Overview</h3>
+                        <h4>Tour to Louvre</h4>
+                        <div class="overview-text-input">
+                          <p id="date-block"><i class='date-icon'></i>Friday, August 19</p>
+                          <p id="time-block"><i class='time-icon'></i>16 : 30</p>
+                          <p id="ticket-type-block"><i class='type-icon'></i>Temporary exhibition</p>
+                        </div>
+                        <div class="overview-image">
+                          <img src="assets/modal/Rectangle 4.png" draggable="false" />
+                        </div>
+                      </div>
+                      <div class="tickets-summary">
+                      </div>
+                      <div class="credit-card-div">
+                        <div class="credit-card credit-card-front">
+                          <div class="card">
+                            <form>
+                              <label for="card-number">Card Number</label>
+                              <input type="text" id="card-number" class="card-number" name="card-number">
+                              <fieldset class="exp-date">
 
+                                <legend>Expiration date</legend>
+                                <div class="card-month-group">              
+                                  <label for="card-month"></label>
+                                  <input type="number" id="card-month" min="1" max="12">
+                                  <div class="card-button-group">
+                                    <button type="button" onclick="this.parentNode.previousElementSibling.stepUp(); this.parentNode.previousElementSibling.onchange();"><i class='arrow-up'></i></button>
+                                    <button type="button" onclick="this.parentNode.previousElementSibling.stepDown(); this.parentNode.previousElementSibling.onchange();"><i class='arrow-down'></i></button>
+                                  </div>
+                                </div>
+                                <div class="card-year-group">
+                                  <label for="card-year"></label>
+                                  <input type="number" id="card-year" class="card-year" name="card-year" min="2020"
+                                  max="2099">
+                                  <div class="card-button-group">
+                                    <button type="button" onclick="this.parentNode.previousElementSibling.stepUp(); this.parentNode.previousElementSibling.onchange();"><i class='arrow-up'></i></button>
+                                    <button type="button" onclick="this.parentNode.previousElementSibling.stepDown(); this.parentNode.previousElementSibling.onchange();"><i class='arrow-down'></i></button>
+                                  </div>
+                                </div>
+                              </fieldset>
+                              <label for="cardholder-name">Cardholder name</label>
+                              <input type="text" id="cardholder-name" class="cardholder-name" name="cardholder-name">
+                              </label>
+                              <div class="cvc-cw">
+                                <label for="card-cvc-cw">CVC/CVV</label>
+                                <input type="text" id="card-cvc-cw" class="card-cvc-cw" name="card-cvc-cw">
+                                <span>The last<br> 3 or 4 digits<br> on back<br> of the card</span>
+                                </label>
+                              </div>
+                              <div class="visa-mastercard">
+                                <img src="assets/modal/Visa.png" alt="visa">
+                                <img src="assets/modal/Mastercard.png" alt="mastercard">
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="credit-card credit-card-back">
+                          <div class="card">
+                            <div class="magnet"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="booking-modal-button">
+                        <button class="book-ripple">Book</button>
+                            </div>
                     </div>
                   </div>
                 </div>
@@ -433,6 +496,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
     <section class="parallax white-section">
@@ -603,6 +667,7 @@
   <script src="assets/js/videoswiper.js"></script>
   <script src="assets/js/gallery.js"></script>
   <script src="assets/js/modal.js"></script>
+  <script src="assets/js/ripple-button.js"></script>
 </body>
 
 </html>`
