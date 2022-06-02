@@ -1118,21 +1118,33 @@ video {
   position: relative;
   background-color: #fefefe;
   margin: auto;
-  padding: 0;
   border: 1px solid #888;
-  width: 85%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 1440px;
+  height: 845px;
 }
 
 .booking {
   margin: 91px 235px;
   display: flex;
 }
-.booking-tickets,
-.booking-overview {
-  width: 50%;
-  height: 100%;
+.booking-tickets {
+  width: 400px;
+  height: 663px;
 }
+
+.booking-overview {
+  width: 530px;
+  height: 663px;
+}
+.booking-tickets-title {
+  display: flex;
+  flex-direction: column;
+}
+.booking-tickets-title img {
+  width: 85px;
+  height: 41px;
+}
+
 .booking-tickets h3 {
   margin: 0;
   margin-bottom: 15px;
@@ -1154,6 +1166,7 @@ video {
   font-size: 18px;
   line-height: 21px;
   color: #710707;
+  padding-bottom: 60px;
 }
 .booking-tickets h4::after {
   display: block;
@@ -1165,16 +1178,16 @@ video {
   background-color: var(--dark-red);
   position: relative;
 }
-/* .booking-form {
+.booking-form {
   display: flex;
   flex-direction: column;
-} */
+}
 .booking-form div.elem-group {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .booking-form div.elem-group.inlined {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
@@ -1186,17 +1199,12 @@ video {
   height: 100%;
 }
 
-
 .booking-form input,
 .booking-form select {
   border: 1px solid black;
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
-}
-
-.booking-form div.elem-group.inlined input {
-  display: inline-block;
 }
 
 .tickets-amount-modal .number {
@@ -1213,10 +1221,10 @@ video {
   -webkit-appearance: none;
 }
 
-.booking-form input, 
+.booking-form input,
 .booking-form input::placeholder,
 .booking-form select {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1224,16 +1232,21 @@ video {
   color: #030303;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.booking-form input::-webkit-outer-spin-button,
+.booking-form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input[type="date"]::-webkit-calendar-picker-indicator, input[type="time"]::-webkit-calendar-picker-indicator {
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
   background: url(assets/modal/arrow.png) no-repeat;
+  margin-top: 5px;
   cursor: pointer;
 }
-input[type="date"]::before, input[type="time"]::before { 
+
+input[type="date"]::before,
+input[type="time"]::before {
   content: attr(data-placeholder);
   width: 100%;
   text-indent: 25px;
@@ -1244,9 +1257,8 @@ input[type="date"]::before, input[type="time"]::before {
 }
 
 input[type="date"]:valid::before,
-input[type="time"]:valid::before
- {
-  display: none 
+input[type="time"]:valid::before {
+  display: none;
 }
 
 #date {
@@ -1284,15 +1296,37 @@ input[type="time"]:valid::before
   outline: none;
 }
 
-#room-selection {
-  background: url(assets/modal/arrow.png) no-repeat right;
-  background-position-x: 365px;
+.elem-group select {
+  display: block;
+  background: url(assets/modal/ballot.png) no-repeat left 0.5rem center,
+              url(assets/modal/arrow.png) no-repeat right 1rem center;
   -webkit-appearance: none;
+  text-indent: 25px;
   cursor: pointer;
 }
 .tickets-amount-modal {
   border: solid 1px var(--bg-dark);
   padding: 10px;
+}
+
+.tickets-amount-modal h4 {
+  font-family: "Forum";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #9d8665;
+  padding-bottom: 15px;
+}
+.tickets-amount-modal h4::after {
+  display: block;
+  content: "";
+  top: 5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--dark-red);
+  position: relative;
 }
 
 .tickets-basic-modal,
@@ -1307,7 +1341,7 @@ input[type="time"]:valid::before
 .tickets-basic-modal p,
 .tickets-senior-modal p {
   display: inline-block;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1346,6 +1380,301 @@ input[type="time"]:valid::before
   text-align: center;
   background-color: #000000;
   color: white;
+}
+
+.booking-overview {
+  border: solid 1px var(--bg-dark);
+  padding: 25px 25px;
+  margin-left: 40px
+}
+
+.booking-overview h3 {
+  font-family: Roboto Medium;
+  margin-left:5px;
+  margin-bottom: 3px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #272727; 
+  float: none;
+}
+
+.booking-overview h4 {
+font-family: Roboto Medium;
+font-style: normal;
+margin-left:5px;
+font-weight: 500;
+font-size: 22px;
+line-height: 26px;
+color: #740C11;
+opacity: 0.9;
+}
+
+.overview-text-input {
+  margin-top: -5px;
+  margin-left: 5px
+}
+.overview-text-input p {
+  font-family: 'Roboto Light';
+  margin-bottom: 5px;
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+color: #030303;
+}
+
+.overview-image {
+  position: relative;
+}
+.overview-image img {
+  position: absolute;
+  bottom: 37px;
+  right: 3px;  
+}
+
+.date-icon {
+  background-image: url('assets/modal/date.png');
+  margin-right: 15px;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+}
+.time-icon {
+  background-image: url('assets/modal/time.png');
+  margin-right: 15px;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+}
+.type-icon {
+  background-image: url('assets/modal/check_circle_outline.png');
+  margin-right: 15px;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+}
+
+
+
+
+
+
+.credit-card {
+  position: relative;
+  width: 360px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.magnet {
+  margin-top: 25px;
+  display: block;
+  width: 100%;
+  margin-left: 20px;
+  background-color: #000;
+  height: 45px;
+}
+.card {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 15px 20px;
+  width: 360px;
+  height: 211px;
+  overflow: hidden;
+}
+.card label {
+  display:block;
+  padding: 5px 0 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+
+#card-number {
+  width: 215px;
+  height: 35px;
+  border: solid 1px #A4A4A3;
+}
+
+#cardholder-name {
+  width: 320px;
+  height: 35px;
+  border: solid 1px #A4A4A3;
+}
+
+.card fieldset {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+  border: 0;
+}
+
+.card-month-group,
+.card-year-group {
+  display: flex;
+}
+
+.arrow-up {
+  background-image: url('assets/modal/arrow1.png');
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-position: bottom center;
+  margin-bottom: 1.5px;
+  display: block;
+}
+
+.arrow-down {
+  background-image: url('assets/modal/arrow2.png');
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-position: top center;
+  margin-top: 1.5px;
+  display: block;
+}
+
+.card-button-group{
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #A4A4A3;
+  border-left:none;
+  /* border-top:none;
+  border-bottom: none; */
+}
+
+.card-button-group button{
+  width: 28px;
+  flex: 1;
+  border: none;
+  background-color: white;
+}
+
+.card-button-group button:hover{
+  background-color: #ccc;
+}
+.card-button-group button:active{
+  background-color: #888;
+}
+.exp-date input[type="number"]::-webkit-outer-spin-button,
+.exp-date input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+}
+
+.exp-date input[type='number'],
+.exp-date input[type="number"]:hover,
+.exp-date input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.card-year-group {
+  margin-left: 13px;
+}
+
+#card-month, #card-year {
+  width: 72px;
+  height: 35px;
+  border: solid 1px #A4A4A3;
+}
+
+.visa-mastercard {
+  position: absolute;
+  top: 33.5px;
+  left: 285px;  
+  display: flex;
+  flex-direction: column;
+}
+
+.visa-mastercard img {
+  margin: 7.5px 0;
+}
+.cvc-cw {
+  position: absolute;
+  top: 125px;
+  left: 375px;
+  float: right;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+.cvc-cw input {
+  width: 75px;
+  height: 35px;
+  border: solid 1px #A4A4A3;
+}
+.cvc-cw span {
+  width: 55px;
+  height: 50px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.credit-card-back {
+  background: #939393;
+  left: 110px;
+  bottom: 180px;
+}
+.credit-card-front {
+  background: #bcbcbc;
+  z-index: 50;
+}
+
+
+.booking-modal-button button {
+  width: 220px;
+  height: 45px;
+  background-color: #710707;
+  font-family: 'Roboto';
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: background 300ms;
+  float: right;
+}   
+
+.booking-modal-button button:focus {
+outline: none;
+}
+
+.booking-modal-button button .circle {
+position: absolute;
+background-color: white;
+/* width: 50px;
+height: 50px; */
+border-radius: 50%;
+transform: scale(0);
+animation: scale 0.5s linear;
+}
+
+@keyframes scale {
+to {
+  transform: scale(3);
+  opacity: 0;
+}
 }
 
 .parallax-container {
