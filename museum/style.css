@@ -970,7 +970,10 @@ video {
 
 .tickets-amount {
   margin-left: auto;
+  display: flex;
+  flex-direction: column;
 }
+
 .tickets-amount h3 {
   margin-left: auto;
   float: right;
@@ -1265,12 +1268,14 @@ input[type="time"]:valid::before {
   background-image: url(assets/modal/date.png);
   background-position: 10px center;
   background-repeat: no-repeat;
+  text-indent: 15px;
 }
 
 #time {
   background-image: url(assets/modal/time.png);
   background-position: 10px center;
   background-repeat: no-repeat;
+  text-indent: 15px;
 }
 
 #name {
@@ -1299,7 +1304,7 @@ input[type="time"]:valid::before {
 .elem-group select {
   display: block;
   background: url(assets/modal/ballot.png) no-repeat left 0.5rem center,
-              url(assets/modal/arrow.png) no-repeat right 1rem center;
+    url(assets/modal/arrow.png) no-repeat right 1rem center;
   -webkit-appearance: none;
   text-indent: 25px;
   cursor: pointer;
@@ -1385,44 +1390,44 @@ input[type="time"]:valid::before {
 .booking-overview {
   border: solid 1px var(--bg-dark);
   padding: 25px 25px;
-  margin-left: 40px
+  margin-left: 40px;
 }
 
 .booking-overview h3 {
   font-family: Roboto Medium;
-  margin-left:5px;
+  margin-left: 5px;
   margin-bottom: 3px;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 38px;
-  color: #272727; 
+  color: #272727;
   float: none;
 }
 
 .booking-overview h4 {
-font-family: Roboto Medium;
-font-style: normal;
-margin-left:5px;
-font-weight: 500;
-font-size: 22px;
-line-height: 26px;
-color: #740C11;
-opacity: 0.9;
+  font-family: Roboto Medium;
+  font-style: normal;
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #740c11;
+  opacity: 0.9;
 }
 
 .overview-text-input {
   margin-top: -5px;
-  margin-left: 5px
+  margin-left: 5px;
 }
 .overview-text-input p {
-  font-family: 'Roboto Light';
+  font-family: "Roboto Light";
   margin-bottom: 5px;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-color: #030303;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
 }
 
 .overview-image {
@@ -1431,35 +1436,72 @@ color: #030303;
 .overview-image img {
   position: absolute;
   bottom: 37px;
-  right: 3px;  
+  right: 3px;
 }
 
 .date-icon {
-  background-image: url('assets/modal/date.png');
+  background-image: url("assets/modal/date.png");
   margin-right: 15px;
   height: 15px;
   width: 15px;
   display: inline-block;
 }
 .time-icon {
-  background-image: url('assets/modal/time.png');
+  background-image: url("assets/modal/time.png");
   margin-right: 15px;
   height: 15px;
   width: 15px;
   display: inline-block;
 }
 .type-icon {
-  background-image: url('assets/modal/check_circle_outline.png');
+  background-image: url("assets/modal/check_circle_outline.png");
   margin-right: 15px;
   height: 15px;
   width: 15px;
   display: inline-block;
 }
 
+.tickets-summary-type {
+  margin-top: 22px;
+}
 
+.tickets-summary-type::after {
+  display: block;
+  content: "";
+  top: 5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--dark-red);
+  position: relative;
+}
 
+.tickets-summary-type-value,
+.tickets-summary-total {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.tickets-summary-type-value input {
+  border: none;
+  margin: 0 10px 6px 0;
+  width: 32px;
+  height: 20px;
+  background: #000000;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #A4A4A3;
+  text-align: center;
+}
 
-
+.tickets-summary-type-value input::-webkit-outer-spin-button,
+.tickets-summary-type-value input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 .credit-card {
   position: relative;
@@ -1486,9 +1528,9 @@ color: #030303;
   overflow: hidden;
 }
 .card label {
-  display:block;
+  display: block;
   padding: 5px 0 5px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -1499,19 +1541,21 @@ color: #030303;
 #card-number {
   width: 215px;
   height: 35px;
-  border: solid 1px #A4A4A3;
+  border: solid 1px #a4a4a3;
+  text-align: center;
 }
 
 #cardholder-name {
   width: 320px;
   height: 35px;
-  border: solid 1px #A4A4A3;
+  border: solid 1px #a4a4a3;
+  text-align: center;
 }
 
 .card fieldset {
   display: flex;
   flex-direction: row;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -1526,7 +1570,7 @@ color: #030303;
 }
 
 .arrow-up {
-  background-image: url('assets/modal/arrow1.png');
+  background-image: url("assets/modal/arrow1.png");
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -1536,7 +1580,7 @@ color: #030303;
 }
 
 .arrow-down {
-  background-image: url('assets/modal/arrow2.png');
+  background-image: url("assets/modal/arrow2.png");
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -1545,54 +1589,55 @@ color: #030303;
   display: block;
 }
 
-.card-button-group{
+.card-button-group {
   display: flex;
   flex-direction: column;
-  border: solid 1px #A4A4A3;
-  border-left:none;
+  border: solid 1px #a4a4a3;
+  border-left: none;
   /* border-top:none;
   border-bottom: none; */
 }
 
-.card-button-group button{
+.card-button-group button {
   width: 28px;
   flex: 1;
   border: none;
   background-color: white;
 }
 
-.card-button-group button:hover{
+.card-button-group button:hover {
   background-color: #ccc;
 }
-.card-button-group button:active{
+.card-button-group button:active {
   background-color: #888;
 }
 .exp-date input[type="number"]::-webkit-outer-spin-button,
 .exp-date input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none; 
+  -webkit-appearance: none;
 }
 
-.exp-date input[type='number'],
+.exp-date input[type="number"],
 .exp-date input[type="number"]:hover,
 .exp-date input[type="number"]:focus {
-    appearance: none;
-    -moz-appearance: textfield;
+  appearance: none;
+  text-align: center;
 }
 
 .card-year-group {
   margin-left: 13px;
 }
 
-#card-month, #card-year {
+#card-month,
+#card-year {
   width: 72px;
   height: 35px;
-  border: solid 1px #A4A4A3;
+  border: solid 1px #a4a4a3;
 }
 
 .visa-mastercard {
   position: absolute;
   top: 33.5px;
-  left: 285px;  
+  left: 285px;
   display: flex;
   flex-direction: column;
 }
@@ -1605,22 +1650,24 @@ color: #030303;
   top: 125px;
   left: 375px;
   float: right;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
+  text-align: center;
   color: #161615;
 }
 .cvc-cw input {
   width: 75px;
   height: 35px;
-  border: solid 1px #A4A4A3;
+  text-align: center;
+  border: solid 1px #a4a4a3;
 }
 .cvc-cw span {
   width: 55px;
   height: 50px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -1637,44 +1684,43 @@ color: #030303;
   z-index: 50;
 }
 
-
 .booking-modal-button button {
   width: 220px;
   height: 45px;
   background-color: #710707;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   border: none;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   overflow: hidden;
   position: relative;
   transition: background 300ms;
   float: right;
-}   
+}
 
 .booking-modal-button button:focus {
-outline: none;
+  outline: none;
 }
 
 .booking-modal-button button .circle {
-position: absolute;
-background-color: white;
-/* width: 50px;
+  position: absolute;
+  background-color: white;
+  /* width: 50px;
 height: 50px; */
-border-radius: 50%;
-transform: scale(0);
-animation: scale 0.5s linear;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: scale 0.5s linear;
 }
 
 @keyframes scale {
-to {
-  transform: scale(3);
-  opacity: 0;
-}
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
 }
 
 .parallax-container {
@@ -1747,22 +1793,28 @@ footer {
 }
 .footer-container {
   min-height: 265px;
-  margin-left: 240px;
-  margin-right: 240px;
+  /* margin-left: 240px;
+  margin-right: 240px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .footer-logo {
-  margin-top: 75px;
+  margin-top: 60px;
   align-self: flex-start;
 }
 
+.footer-navigation {
+  /* margin-left: 140px; */
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-navigation ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 150px;
+  margin: 0;
+  columns: 2;
+  column-gap: 155px;
   list-style-type: none;
 }
 
@@ -1787,15 +1839,12 @@ footer {
 }
 
 .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-self: flex-end;
+  padding-bottom: 75px;
 }
 
 .social ul {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   column-gap: 25px;
 }
 .social li {
