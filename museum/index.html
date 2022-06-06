@@ -379,8 +379,8 @@
                       </div>
                       <form class=booking-form>
                         <div class="elem-group inlined">
-                          <input type="date" id="date" name="date" data-placeholder="Date" required>
-                          <input type="time" id="time" name="time" data-placeholder="Time" required>
+                          <input type="date" id="date" name="date" data-placeholder="Date" onchange="createDate(this.value);" required>
+                          <input type="time" id="time" name="time" data-placeholder="Time" onchange="createTime(this.value);"required>
                         </div>
                         <div class="elem-group">
                           <input type="text" id="name" name="visitor_name" placeholder="Name" pattern=[A-Z\sa-z]{3,20}
@@ -394,7 +394,7 @@
                             pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
                         </div>
                         <div class="elem-group">
-                          <select id="ticket-type" name="room_preference" required>
+                          <select id="ticket-type" name="ticket-type" onchange="createText();" required>
                             <option value="">Ticket Type</option>
                             <option value="permanent">Permanent exhibition</option>
                             <option value="temporary">Temporary exhibition</option>
@@ -427,9 +427,9 @@
                         <h3>Overview</h3>
                         <h4>Tour to Louvre</h4>
                         <div class="overview-text-input">
-                          <p id="date-block"><i class='date-icon'></i>Friday, August 19</p>
-                          <p id="time-block"><i class='time-icon'></i>16 : 30</p>
-                          <p id="ticket-type-block"><i class='type-icon'></i>Temporary exhibition</p>
+                          <p id="date-block"><i class='date-icon'></i><span id="date-option">Date</span></p>
+                          <p id="time-block"><i class='time-icon'></i><span id="time-option">Time</span></p>
+                          <p id="ticket-type-block"><i class='type-icon'></i><span id="type-option"></span></p>
                         </div>
                         <div class="overview-image">
                           <img src="assets/modal/Rectangle 4.png" draggable="false" />
