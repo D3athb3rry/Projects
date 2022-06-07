@@ -99,6 +99,8 @@ const minValueBasic = 0;
 const maxValueBasic = 20;
 const minValueSenior = 0;
 const maxValueSenior = 20;
+const basicPrice = 20;
+const seniorPrice = 10;
 let inputValue1 = minValueBasic;
 let inputValue2 = minValueSenior;
 const firstInput = document.getElementById('basic-modal');
@@ -113,6 +115,17 @@ function init() {
   fourthInput.value = inputValue2;
 }
 
+
+function calcPrice() {
+  let basicResult =  inputValue1 * basicPrice;
+  document.getElementById("basic-result").innerHTML = basicResult || "";
+  let seniorResult = inputValue2 * seniorPrice;
+  document.getElementById("senior-result").innerHTML = seniorResult || "";
+  let totalResult = basicResult + seniorResult;
+  document.getElementById("total-result").innerHTML = totalResult || "";
+}
+
+
 function checkValue(num, checkValue) {
   if (typeof num === "number") {
     return num !== checkValue;
@@ -124,6 +137,7 @@ function decreaseBasic() {
     inputValue1 -= 1;
     firstInput.value = inputValue1;
     secondInput.value = inputValue1;
+    calcPrice();
   }
 }
 
@@ -132,8 +146,7 @@ function increaseBasic() {
     inputValue1 += 1;
     firstInput.value = inputValue1;
     secondInput.value = inputValue1;
-    let result = inputValue1 * 20;
-    document.getElementById("basic-result").innerHTML = result;
+    calcPrice();
   }
 }
 function decreaseSenior() {
@@ -141,8 +154,7 @@ function decreaseSenior() {
     inputValue2 -= 1;
     thirdInput.value = inputValue2;
     fourthInput.value = inputValue2;
-    // let result = document.getElementById("senior-result").innerText /  fourthInput.value* 10;
-    document.getElementById("senior-result").innerHTML = result;
+    calcPrice();
   }
 }
 
@@ -151,10 +163,8 @@ function increaseSenior() {
     inputValue2 += 1;
     thirdInput.value = inputValue2;
     fourthInput.value = inputValue2;
-    let result = inputValue2 * 10;
-    document.getElementById("senior-result").innerHTML = result;
+    calcPrice();
   }
 }
-
 init();
 

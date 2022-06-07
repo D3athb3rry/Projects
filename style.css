@@ -1087,6 +1087,7 @@ video {
 .modal.show {
   left: 0;
   opacity: 1;
+  /* overflow-y: hidden; */
 }
 
 /* Modal Content/Box */
