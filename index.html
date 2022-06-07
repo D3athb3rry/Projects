@@ -369,7 +369,7 @@
               <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
-                  <span class="close">&times;</span>
+                  <span class="close"><i class='close-icon'></i></span>
                   <div class="booking">
                     <div class="booking-tickets">
                       <div class="booking-tickets-title">
@@ -379,8 +379,10 @@
                       </div>
                       <form class=booking-form>
                         <div class="elem-group inlined">
-                          <input type="date" id="date" name="date" data-placeholder="Date" onchange="createDate(this.value);" required>
-                          <input type="time" id="time" name="time" data-placeholder="Time" onchange="createTime(this.value);"required>
+                          <input type="date" id="date" name="date" data-placeholder="Date"
+                            onchange="createDate(this.value);" required>
+                          <input type="time" id="time" name="time" data-placeholder="Time"
+                            onchange="createTime(this.value);" required>
                         </div>
                         <div class="elem-group">
                           <input type="text" id="name" name="visitor_name" placeholder="Name" pattern=[A-Z\sa-z]{3,20}
@@ -406,17 +408,17 @@
                           <div class="tickets-basic-modal">
                             <p>Basic 18+ (20 €)</p>
                             <div class="tickets-basic-modal-amount">
-                              <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                              <input type="number" min="0" max="20" value="1" readonly class="number">
-                              <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                              <button type="button" onclick="decreaseBasic()">–</button>
+                              <input type="number" id="basic-modal" min="0" max="20" value="1" readonly class="number">
+                              <button type="button" onclick="increaseBasic()">+</button>
                             </div>
                           </div>
                           <div class="tickets-senior-modal">
                             <p>Senior 65+ (10 €)</p>
                             <div class="tickets-senior-modal-amount">
-                              <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                              <input type="number" min="0" max="20" value="1" readonly class="number">
-                              <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                              <button type="button" onclick="decreaseSenior()">–</button>
+                              <input type="number" id="senior-modal" min="0" max="20" value="1" readonly class="number">
+                              <button type="button" onclick="increaseSenior()">+</button>
                             </div>
                           </div>
                         </div>
@@ -434,24 +436,29 @@
                         <div class="overview-image">
                           <img src="assets/modal/Rectangle 4.png" draggable="false" />
                         </div>
-                      </div>
                       <div class="tickets-summary">
                         <div class="tickets-summary-type">
                           <div class="tickets-summary-type-value">
-                            <input type="number" value="1" readonly class="summary-number">
+                            <input type="number" id="basic-modal-repeat" readonly class="summary-number">
                             <p class="tickets-summary-ticket-price">Basic (20 €)</p>
-                            <p class="tickets-summary-ticket-sum">40 €</p>
                           </div>
+                          <div class="tickets-summary-result">
+                            <p class="tickets-summary-ticket-sum"><span id="basic-result"></span> €</p>
+                          </div>
+                        </div>
+                        <div class="tickets-summary-type">
                           <div class="tickets-summary-type-value">
-                            <input type="number" value="1" readonly class="summary-number">
-                            <p class="tickets-summary-ticket-price">Basic (20 €)</p>
-                            <p class="tickets-summary-ticket-sum">40 €</p>
+                            <input type="number" id="senior-modal-repeat" readonly class="summary-number">
+                            <p>Senior (10 €)</p>
+                          </div>
+                          <div class="tickets-summary-result">
+                            <p><span id="senior-result"></span> €</p>
                           </div>
                         </div>
-                        <div class="tickets-summary-total">
-                          <p class="tickets-summary-total-text">Total:</p>
-                          <p class="tickets-summary-total-sum">60 €</p>
-                        </div>
+                      </div>
+                      <div class="tickets-summary-total">
+                        <p class="tickets-summary-total-text">Total:</p>
+                        <p class="tickets-summary-total-sum"><span id="total-result"> </span> €</p>
                       </div>
                       <div class="credit-card-div">
                         <div class="credit-card credit-card-front">

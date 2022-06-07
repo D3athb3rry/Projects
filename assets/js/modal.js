@@ -54,7 +54,7 @@ function createTime(time) {
     if (time.value !== "") {
         var hours = time.split(":")[0];
         var minutes = time.split(":")[1];
-        var displayTime = hours + ":" + minutes;
+        var displayTime = hours + " : " + minutes;
         document.getElementById("time-option").innerHTML = displayTime;
     }
 }
@@ -94,3 +94,67 @@ function createDate(date) {
     document.getElementById("date-option").innerHTML = displayDate;
     }
 }
+
+const minValueBasic = 0;
+const maxValueBasic = 20;
+const minValueSenior = 0;
+const maxValueSenior = 20;
+let inputValue1 = minValueBasic;
+let inputValue2 = minValueSenior;
+const firstInput = document.getElementById('basic-modal');
+const secondInput = document.getElementById('basic-modal-repeat');
+const thirdInput = document.getElementById('senior-modal');
+const fourthInput = document.getElementById('senior-modal-repeat');
+
+function init() {
+  firstInput.value = inputValue1;
+  secondInput.value = inputValue1;
+  thirdInput.value = inputValue2;
+  fourthInput.value = inputValue2;
+}
+
+function checkValue(num, checkValue) {
+  if (typeof num === "number") {
+    return num !== checkValue;
+  }
+}
+
+function decreaseBasic() {
+  if (checkValue(inputValue1, minValueBasic)) {
+    inputValue1 -= 1;
+    firstInput.value = inputValue1;
+    secondInput.value = inputValue1;
+  }
+}
+
+function increaseBasic() {
+  if (checkValue(inputValue1, maxValueBasic)) {
+    inputValue1 += 1;
+    firstInput.value = inputValue1;
+    secondInput.value = inputValue1;
+    let result = inputValue1 * 20;
+    document.getElementById("basic-result").innerHTML = result;
+  }
+}
+function decreaseSenior() {
+  if (checkValue(inputValue2, minValueSenior)) {
+    inputValue2 -= 1;
+    thirdInput.value = inputValue2;
+    fourthInput.value = inputValue2;
+    // let result = document.getElementById("senior-result").innerText /  fourthInput.value* 10;
+    document.getElementById("senior-result").innerHTML = result;
+  }
+}
+
+function increaseSenior() {
+  if (checkValue(inputValue2, maxValueSenior)) {
+    inputValue2 += 1;
+    thirdInput.value = inputValue2;
+    fourthInput.value = inputValue2;
+    let result = inputValue2 * 10;
+    document.getElementById("senior-result").innerHTML = result;
+  }
+}
+
+init();
+

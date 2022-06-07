@@ -1,1 +1,1 @@
-https://d3athb3rry.github.io/my-projects/museum/ (WIP)
+https://d3athb3rry.github.io/my-projects/museum/
