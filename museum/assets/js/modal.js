@@ -54,7 +54,7 @@ function createTime(time) {
     if (time.value !== "") {
         var hours = time.split(":")[0];
         var minutes = time.split(":")[1];
-        var displayTime = hours + ":" + minutes;
+        var displayTime = hours + " : " + minutes;
         document.getElementById("time-option").innerHTML = displayTime;
     }
 }
@@ -94,3 +94,77 @@ function createDate(date) {
     document.getElementById("date-option").innerHTML = displayDate;
     }
 }
+
+const minValueBasic = 0;
+const maxValueBasic = 20;
+const minValueSenior = 0;
+const maxValueSenior = 20;
+const basicPrice = 20;
+const seniorPrice = 10;
+let inputValue1 = minValueBasic;
+let inputValue2 = minValueSenior;
+const firstInput = document.getElementById('basic-modal');
+const secondInput = document.getElementById('basic-modal-repeat');
+const thirdInput = document.getElementById('senior-modal');
+const fourthInput = document.getElementById('senior-modal-repeat');
+
+function init() {
+  firstInput.value = inputValue1;
+  secondInput.value = inputValue1;
+  thirdInput.value = inputValue2;
+  fourthInput.value = inputValue2;
+}
+
+
+function calcPrice() {
+  let basicResult =  inputValue1 * basicPrice;
+  document.getElementById("basic-result").innerHTML = basicResult || "";
+  let seniorResult = inputValue2 * seniorPrice;
+  document.getElementById("senior-result").innerHTML = seniorResult || "";
+  let totalResult = basicResult + seniorResult;
+  document.getElementById("total-result").innerHTML = totalResult || "";
+}
+
+
+function checkValue(num, checkValue) {
+  if (typeof num === "number") {
+    return num !== checkValue;
+  }
+}
+
+function decreaseBasic() {
+  if (checkValue(inputValue1, minValueBasic)) {
+    inputValue1 -= 1;
+    firstInput.value = inputValue1;
+    secondInput.value = inputValue1;
+    calcPrice();
+  }
+}
+
+function increaseBasic() {
+  if (checkValue(inputValue1, maxValueBasic)) {
+    inputValue1 += 1;
+    firstInput.value = inputValue1;
+    secondInput.value = inputValue1;
+    calcPrice();
+  }
+}
+function decreaseSenior() {
+  if (checkValue(inputValue2, minValueSenior)) {
+    inputValue2 -= 1;
+    thirdInput.value = inputValue2;
+    fourthInput.value = inputValue2;
+    calcPrice();
+  }
+}
+
+function increaseSenior() {
+  if (checkValue(inputValue2, maxValueSenior)) {
+    inputValue2 += 1;
+    thirdInput.value = inputValue2;
+    fourthInput.value = inputValue2;
+    calcPrice();
+  }
+}
+init();
+
