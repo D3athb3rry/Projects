@@ -73,6 +73,8 @@ header {
 .nav-item {
   margin-left: 55px;
 }
+
+
 .nav-item a,
 .mobile-nav-item a {
   width: 122px;
@@ -109,6 +111,7 @@ header {
 }
 .mobile-nav-label #mobile-nav-btn,
 .mobile-nav-label #mobile-nav-cancel {
+  z-index: 70;
   float: right;
   cursor: pointer;
   display: none;
@@ -837,20 +840,19 @@ video {
 .picture-container {
   margin-top: 75px;
   max-width: 100%;
-  height: 1500px;
+  height: 210vh;
   overflow-y: hidden;
   position: relative;
 }
 
 .picture-inner-container {
-  line-height: 36px;
-  row-gap: 24px;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
+  column-width: 456px;
   column-count: 3;
   column-gap: 24px;
-  -webkit-column-gap: 24px;
-  -moz-column-gap: 24px;
+}
+
+.gallery-img {
+  margin-bottom: 24px;
 }
 
 .picture-overlay {
@@ -1848,7 +1850,7 @@ footer {
 .footer-container {
   min-height: 265px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -1857,9 +1859,16 @@ footer {
   align-self: flex-start;
 }
 
-.footer-navigation {
+.footer-nav-mobile {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.footer-navigation {
+  align-self: flex-start;
+  padding-left: 145px;
 }
 
 .footer-navigation ul {
@@ -1891,7 +1900,6 @@ footer {
 
 .social {
   align-self: flex-end;
-  padding-bottom: 75px;
 }
 
 .social ul {
@@ -2178,6 +2186,12 @@ footer {
     height: 5px;
   }
 
+  .picture-inner-container {
+    column-width: 304px;
+    column-count: 3;
+    column-gap: 24px;
+  }
+
   .tickets-type {
     margin-left: 60px;
     visibility: hidden;
@@ -2185,6 +2199,21 @@ footer {
   .tickets-amount {
     margin-left: -150px;
   }
+  .modal-content {
+    background-color: #fefefe;
+    width: 1030px;
+    height: 768px;
+  }
+  .booking {
+    margin: 75px 30px 30px 30px;
+    display: flex;
+  }
+  
+  .gallery-img {
+    width: 100%;
+    height: auto;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -2210,21 +2239,30 @@ footer {
 
   .header-mobile-navigation-items {
     overflow-y: scroll;
-    padding-left: 20px;
     position: fixed;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-    top: -150%;
+    height: calc(100% - 110px);
+    top: -100%;
     left: 0;
     background-color: var(--bg-dark);
     text-align: left;
     transition: all 0.5s;
   }
+
+  .header-mobile-navigation-items-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-mobile-navigation-items ul {
+    align-self: flex-start;
+  }
+
   .header-mobile-navigation-items li {
-    margin-left: 30px;
+    margin-left: 20px;
     display: block;
   }
 
@@ -2239,23 +2277,40 @@ footer {
   .header-mobile-nav-checkbox:checked ~ .mobile-nav-label #mobile-nav-cancel {
     display: block;
   }
-  .mobile-nav-img {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    height: 100%;
+    .mobile-social {
+      align-self: center;
+    }
+    .mobile-social>.social {
+      align-self: center;
+    }
+
+    .mobile-nav-image-container {
+      width: 100%;
+      height: auto;
+    }
+  .mobile-nav-image-container::after {
+    display: block;
+    content: "";
+    top: 0;
+    left: 10px;
+    height: 2px;
+    width: 93.5%;
+    background-color: #666666;
+    position: relative;
   }
 
-  .mobile-nav-img-1 {
-    grid-area: 1 / 1 / 2 / 3;
+  .mobile-nav-img {
+    display: flex;
+    flex-wrap: wrap;
   }
+
+  .mobile-nav-img-1,
   .mobile-nav-img-2 {
-    grid-area: 2 / 1 / 3 / 2;
+    display: inline-block;
+    margin: 0 20px 10px 10px;
   }
   .mobile-nav-img-3 {
-    grid-area: 2 / 2 / 3 / 3;
+    display: inline;
   }
 
   .welcome-container {
@@ -2300,17 +2355,252 @@ footer {
     display: none;
   }
   .picture-inner-container {
-    line-height: 36px;
-    row-gap: 24px;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
+    column-width: 352px;
     column-count: 2;
     column-gap: 24px;
-    -webkit-column-gap: 24px;
-    -moz-column-gap: 24px;
   }
+
+  .gallery-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    width: 590px;
+    height: 1479px;
+  }
+  .booking {
+    margin: 80px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .booking-tickets {
+    width: 530px;
+    height: 663px;
+}
+.booking-overview {
+  margin-top: 50px;
+  margin-left: 0;
+}
+
   .tickets-image img {
     width: 444px;
     height: 340px;
+  }
+
+  .footer-logo {
+    margin-top: 20px;
+    align-self: flex-start;
+}
+  .footer-nav-mobile {
+    flex-direction: column;
+  }
+  .social {
+    margin-top: 40px;
+    margin-right: 50px;
+  }
+}
+@media (max-width: 420px) {
+  .container {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .header-container {
+    min-height: 90px;
+  }
+  .header-sidebar {
+    display: none;
+  }
+
+  .mobile-social {
+    display: block;
+  }
+
+  .mobile-nav-label #mobile-nav-btn {
+    display: block;
+  }
+
+  .header-mobile-navigation-items {
+    overflow-y: scroll;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 90px);
+    top: -100%;
+    left: 0;
+    background-color: var(--bg-dark);
+    text-align: left;
+    transition: all 0.5s;
+  }
+
+  .header-mobile-navigation-items-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-mobile-navigation-items ul {
+    align-self: flex-start;
+  }
+
+  .header-mobile-navigation-items li {
+    margin-left: 20px;
+    display: block;
+  }
+
+  .header-mobile-nav-checkbox:checked ~ .header-mobile-navigation-items {
+    top: 90px;
+    left: 0;
+  }
+
+  .header-mobile-nav-checkbox:checked ~ .mobile-nav-label #mobile-nav-btn {
+    display: none;
+  }
+  .header-mobile-nav-checkbox:checked ~ .mobile-nav-label #mobile-nav-cancel {
+    display: block;
+  }
+    .mobile-social {
+      align-self: center;
+    }
+    .mobile-social>.social {
+      align-self: center;
+    }
+
+    .mobile-nav-image-container {
+      width: 100%;
+      height: auto;
+    }
+  .mobile-nav-image-container::after {
+    display: block;
+    content: "";
+    top: 0;
+    left: 10px;
+    height: 2px;
+    width: 93.5%;
+    background-color: #666666;
+    position: relative;
+  }
+
+  .mobile-nav-img {
+    display: flex;
+  }
+
+  .mobile-nav-img-1,
+  .mobile-nav-img-2,
+  .mobile-nav-img-3 {
+    display: inline-block;
+    margin: 0 20px 10px 10px;
+  }
+  
+  .welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-section h1 {
+    padding-top: 0px;
+    font-size: 40px;
+    text-align: center;
+  }
+  .welcome-section h2 {
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .welcome-button {
+    display: none;
+  }
+
+  .welcome-container .swiper-container {
+    width: 380px;
+    height: 285px;
+  }
+
+  .welcome-container .swiper-controls {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .welcome-container .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+  }
+
+  .explore-text p {
+    display: none;
+  }
+  .picture-inner-container {
+    column-width: 178px;
+    column-count: 2;
+    column-gap: 24px;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    width: 420px;
+    height: 1754px;
+  }
+  .booking {
+    margin: 80px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .booking-tickets {
+    width: 360px;
+    height: 670px;
+}
+.booking-overview {
+  margin-top: 50px;
+  margin-left: 0;
+}
+
+.tickets-workspace {
+  display: flex;
+  flex-direction: column;
+}
+
+  .tickets-image img {
+    width: 380px;
+    height: 160px;
+  }
+.contacts-block {
+  flex-direction: column;
+}
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-logo {
+    margin-top: 20px;
+    align-self: flex-start;
+}
+  .footer-nav-mobile {
+    flex-direction: column;
+  }
+  .footer-navigation {
+    padding-left: 0;
+    align-self: center;
+  }
+  .social {
+    margin-top: 0px;
+    margin-right: 0px;
+    align-self: center;
+  }
+  .footer-school {
+    display: none;
   }
 }

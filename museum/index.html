@@ -42,66 +42,76 @@
             </svg>
           </label>
           <div class="header-mobile-navigation-items">
-            <ul>
-              <li class="mobile-nav-item">
-                <a onclick="goToAnchor()" href="#visiting-section">Visiting
-                  <svg>
-                    <use href="#mobile-nav-arrow"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="mobile-nav-item">
-                <a onclick="goToAnchor()" href="#explore-section">Explore
-                  <svg>
-                    <use href="#mobile-nav-arrow"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="mobile-nav-item">
-                <a onclick="goToAnchor()" href="#video-section">Video
-                  <svg>
-                    <use href="#mobile-nav-arrow"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="mobile-nav-item">
-                <a onclick="goToAnchor()" href="#gallery-section">Gallery
-                  <svg>
-                    <use href="#mobile-nav-arrow"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="mobile-nav-item">
-                <a onclick="goToAnchor()" href="#tickets-section">Tickets
-                  <svg>
-                    <use href="#mobile-nav-arrow"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="mobile-nav-item">
-                <a onclick="goToAnchor()" href="#contacts-section">Contacts
-                  <svg>
-                    <use href="#mobile-nav-arrow"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-            <div class="mobile-nav-img">
-              <div class="mobile-nav-img-1"><img src="assets/img/Nav/nav1.jpg" alt=""></div>
-              <div class="mobile-nav-img-2"><img src="assets/img/Nav/nav2.jpg" alt=""></div>
-              <div class="mobile-nav-img-3"><img src="assets/img/Nav/nav3.jpg" alt=""></div>
-            </div>
-            <div class="mobile-social">
+            <div class="header-mobile-navigation-items-inner-container container">
               <ul>
-                <li class="social-icon youtube"><a href="https://www.youtube.com/user/louvre" target="_blank"></a></li>
-                <li class="social-icon instagram"><a href="https://www.instagram.com/museelouvre/" target="_blank"></a>
+                <li class="mobile-nav-item">
+                  <a onclick="goToAnchor()" href="#visiting-section">Visiting
+                    <svg>
+                      <use href="#mobile-nav-arrow"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="social-icon facebook"><a href="https://www.facebook.com/museedulouvre" target="_blank"></a>
+                <li class="mobile-nav-item">
+                  <a onclick="goToAnchor()" href="#explore-section">Explore
+                    <svg>
+                      <use href="#mobile-nav-arrow"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="social-icon twitter"><a href="http://twitter.com/museelouvre" target="_blank"></a></li>
-                <li class="social-icon pinterest"><a href="https://www.pinterest.fr/museedulouvre/" target="_blank"></a>
+                <li class="mobile-nav-item">
+                  <a onclick="goToAnchor()" href="#video-section">Video
+                    <svg>
+                      <use href="#mobile-nav-arrow"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a onclick="goToAnchor()" href="#gallery-section">Gallery
+                    <svg>
+                      <use href="#mobile-nav-arrow"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a onclick="goToAnchor()" href="#tickets-section">Tickets
+                    <svg>
+                      <use href="#mobile-nav-arrow"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a onclick="goToAnchor()" href="#contacts-section">Contacts
+                    <svg>
+                      <use href="#mobile-nav-arrow"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
+              <div class ="mobile-nav-image-container">
+              <div class="mobile-nav-img">
+                <div class="mobile-nav-img-1"><img src="assets/img/Nav/nav1.jpg" alt=""></div>
+                <div class="mobile-nav-img-2"><img src="assets/img/Nav/nav2.jpg" alt=""></div>
+                <div class="mobile-nav-img-3"><img src="assets/img/Nav/nav3.jpg" alt=""></div>
+              </div>
+            </div>
+              <div class="mobile-social">
+                <div class="social">
+                  <ul>
+                    <li class="social-icon youtube"><a href="https://www.youtube.com/user/louvre" target="_blank"></a>
+                    </li>
+                    <li class="social-icon instagram"><a href="https://www.instagram.com/museelouvre/"
+                        target="_blank"></a>
+                    </li>
+                    <li class="social-icon facebook"><a href="https://www.facebook.com/museedulouvre"
+                        target="_blank"></a>
+                    </li>
+                    <li class="social-icon twitter"><a href="http://twitter.com/museelouvre" target="_blank"></a></li>
+                    <li class="social-icon pinterest"><a href="https://www.pinterest.fr/museedulouvre/"
+                        target="_blank"></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </nav>
@@ -436,89 +446,90 @@
                         <div class="overview-image">
                           <img src="assets/modal/Rectangle 4.png" draggable="false" />
                         </div>
-                      <div class="tickets-summary">
-                        <div class="tickets-summary-type">
-                          <div class="tickets-summary-type-value">
-                            <input type="number" id="basic-modal-repeat" readonly class="summary-number">
-                            <p class="tickets-summary-ticket-price">Basic (20 €)</p>
+                        <div class="tickets-summary">
+                          <div class="tickets-summary-type">
+                            <div class="tickets-summary-type-value">
+                              <input type="number" id="basic-modal-repeat" readonly class="summary-number">
+                              <p class="tickets-summary-ticket-price">Basic (20 €)</p>
+                            </div>
+                            <div class="tickets-summary-result">
+                              <p class="tickets-summary-ticket-sum"><span id="basic-result"></span> €</p>
+                            </div>
                           </div>
-                          <div class="tickets-summary-result">
-                            <p class="tickets-summary-ticket-sum"><span id="basic-result"></span> €</p>
+                          <div class="tickets-summary-type">
+                            <div class="tickets-summary-type-value">
+                              <input type="number" id="senior-modal-repeat" readonly class="summary-number">
+                              <p>Senior (10 €)</p>
+                            </div>
+                            <div class="tickets-summary-result">
+                              <p><span id="senior-result"></span> €</p>
+                            </div>
                           </div>
                         </div>
-                        <div class="tickets-summary-type">
-                          <div class="tickets-summary-type-value">
-                            <input type="number" id="senior-modal-repeat" readonly class="summary-number">
-                            <p>Senior (10 €)</p>
-                          </div>
-                          <div class="tickets-summary-result">
-                            <p><span id="senior-result"></span> €</p>
-                          </div>
+                        <div class="tickets-summary-total">
+                          <p class="tickets-summary-total-text">Total:</p>
+                          <p class="tickets-summary-total-sum"><span id="total-result"> </span> €</p>
                         </div>
-                      </div>
-                      <div class="tickets-summary-total">
-                        <p class="tickets-summary-total-text">Total:</p>
-                        <p class="tickets-summary-total-sum"><span id="total-result"> </span> €</p>
-                      </div>
-                      <div class="credit-card-div">
-                        <div class="credit-card credit-card-front">
-                          <div class="card">
-                            <form>
-                              <label for="card-number">Card Number</label>
-                              <input type="text" id="card-number" class="card-number" name="card-number">
-                              <fieldset class="exp-date">
+                        <div class="credit-card-div">
+                          <div class="credit-card credit-card-front">
+                            <div class="card">
+                              <form>
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" class="card-number" name="card-number">
+                                <fieldset class="exp-date">
 
-                                <legend>Expiration date</legend>
-                                <div class="card-month-group">
-                                  <label for="card-month"></label>
-                                  <input type="number" id="card-month" min="1" max="12">
-                                  <div class="card-button-group">
-                                    <button type="button"
-                                      onclick="this.parentNode.previousElementSibling.stepUp(); this.parentNode.previousElementSibling.onchange();"><i
-                                        class='arrow-up'></i></button>
-                                    <button type="button"
-                                      onclick="this.parentNode.previousElementSibling.stepDown(); this.parentNode.previousElementSibling.onchange();"><i
-                                        class='arrow-down'></i></button>
+                                  <legend>Expiration date</legend>
+                                  <div class="card-month-group">
+                                    <label for="card-month"></label>
+                                    <input type="number" id="card-month" min="1" max="12">
+                                    <div class="card-button-group">
+                                      <button type="button"
+                                        onclick="this.parentNode.previousElementSibling.stepUp(); this.parentNode.previousElementSibling.onchange();"><i
+                                          class='arrow-up'></i></button>
+                                      <button type="button"
+                                        onclick="this.parentNode.previousElementSibling.stepDown(); this.parentNode.previousElementSibling.onchange();"><i
+                                          class='arrow-down'></i></button>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="card-year-group">
-                                  <label for="card-year"></label>
-                                  <input type="number" id="card-year" class="card-year" name="card-year" min="2020"
-                                    max="2099">
-                                  <div class="card-button-group">
-                                    <button type="button"
-                                      onclick="this.parentNode.previousElementSibling.stepUp(); this.parentNode.previousElementSibling.onchange();"><i
-                                        class='arrow-up'></i></button>
-                                    <button type="button"
-                                      onclick="this.parentNode.previousElementSibling.stepDown(); this.parentNode.previousElementSibling.onchange();"><i
-                                        class='arrow-down'></i></button>
+                                  <div class="card-year-group">
+                                    <label for="card-year"></label>
+                                    <input type="number" id="card-year" class="card-year" name="card-year" min="2020"
+                                      max="2099">
+                                    <div class="card-button-group">
+                                      <button type="button"
+                                        onclick="this.parentNode.previousElementSibling.stepUp(); this.parentNode.previousElementSibling.onchange();"><i
+                                          class='arrow-up'></i></button>
+                                      <button type="button"
+                                        onclick="this.parentNode.previousElementSibling.stepDown(); this.parentNode.previousElementSibling.onchange();"><i
+                                          class='arrow-down'></i></button>
+                                    </div>
                                   </div>
-                                </div>
-                              </fieldset>
-                              <label for="cardholder-name">Cardholder name</label>
-                              <input type="text" id="cardholder-name" class="cardholder-name" name="cardholder-name">
-                              </label>
-                              <div class="cvc-cw">
-                                <label for="card-cvc-cw">CVC/CVV</label>
-                                <input type="text" id="card-cvc-cw" class="card-cvc-cw" name="card-cvc-cw">
-                                <span>The last<br> 3 or 4 digits<br> on back<br> of the card</span>
+                                </fieldset>
+                                <label for="cardholder-name">Cardholder name</label>
+                                <input type="text" id="cardholder-name" class="cardholder-name" name="cardholder-name">
                                 </label>
-                              </div>
-                              <div class="visa-mastercard">
-                                <img src="assets/modal/Visa.png" alt="visa">
-                                <img src="assets/modal/Mastercard.png" alt="mastercard">
-                              </div>
-                            </form>
+                                <div class="cvc-cw">
+                                  <label for="card-cvc-cw">CVC/CVV</label>
+                                  <input type="text" id="card-cvc-cw" class="card-cvc-cw" name="card-cvc-cw">
+                                  <span>The last<br> 3 or 4 digits<br> on back<br> of the card</span>
+                                  </label>
+                                </div>
+                                <div class="visa-mastercard">
+                                  <img src="assets/modal/Visa.png" alt="visa">
+                                  <img src="assets/modal/Mastercard.png" alt="mastercard">
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="credit-card credit-card-back">
+                            <div class="card">
+                              <div class="magnet"></div>
+                            </div>
                           </div>
                         </div>
-                        <div class="credit-card credit-card-back">
-                          <div class="card">
-                            <div class="magnet"></div>
-                          </div>
+                        <div class="booking-modal-button">
+                          <button class="book-ripple">Book</button>
                         </div>
-                      </div>
-                      <div class="booking-modal-button">
-                        <button class="book-ripple">Book</button>
                       </div>
                     </div>
                   </div>
@@ -527,7 +538,6 @@
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
     <section class="parallax white-section">
@@ -555,27 +565,31 @@
         <div class="footer-logo">
           <img src="assets/svg/Logo.svg" alt="logo">
         </div>
-        <div class="footer-navigation">
-          <nav>
+        <div class="footer-nav-mobile">
+          <div class="footer-navigation">
+            <nav>
+              <ul>
+                <li><a href="#visiting">Visiting</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#tickets">Tickets</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="social">
             <ul>
-              <li><a href="#visiting">Visiting</a></li>
-              <li><a href="#explore">Explore</a></li>
-              <li><a href="#video">Video</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#tickets">Tickets</a></li>
-              <li><a href="#contacts">Contacts</a></li>
+              <li class="social-icon youtube"><a href="https://www.youtube.com/user/louvre" target="_blank"></a></li>
+              <li class="social-icon instagram"><a href="https://www.instagram.com/museelouvre/" target="_blank"></a>
+              </li>
+              <li class="social-icon facebook"><a href="https://www.facebook.com/museedulouvre" target="_blank"></a>
+              </li>
+              <li class="social-icon twitter"><a href="http://twitter.com/museelouvre" target="_blank"></a></li>
+              <li class="social-icon pinterest"><a href="https://www.pinterest.fr/museedulouvre/" target="_blank"></a>
+              </li>
             </ul>
-          </nav>
-        </div>
-        <div class="social">
-          <ul>
-            <li class="social-icon youtube"><a href="https://www.youtube.com/user/louvre" target="_blank"></a></li>
-            <li class="social-icon instagram"><a href="https://www.instagram.com/museelouvre/" target="_blank"></a></li>
-            <li class="social-icon facebook"><a href="https://www.facebook.com/museedulouvre" target="_blank"></a></li>
-            <li class="social-icon twitter"><a href="http://twitter.com/museelouvre" target="_blank"></a></li>
-            <li class="social-icon pinterest"><a href="https://www.pinterest.fr/museedulouvre/" target="_blank"></a>
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
       <div class="container footer-info-container">
