@@ -9,6 +9,14 @@ var swipesVideo = new Swiper(".video-swiper-container", {
   pagination: {
     el: ".video-swiper-container .swiper-pagination",
     clickable: true
+  },
+  breakpoints: {
+    420: {
+        slidesPerView: 2,
+    },
+    768: {
+        slidesPerView: 2,
+    }
   }
 });
 
