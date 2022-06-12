@@ -2436,6 +2436,7 @@ footer {
     background-color: var(--bg-dark);
     text-align: left;
     transition: all 0.5s;
+    padding-left: 0px;
   }
 
   .header-mobile-navigation-items-inner-container {
@@ -2448,7 +2449,7 @@ footer {
   }
 
   .header-mobile-navigation-items li {
-    margin-left: 20px;
+    margin-left: 0px;
     display: block;
   }
 
@@ -2464,6 +2465,7 @@ footer {
     display: block;
   }
     .mobile-social {
+      margin: 24px 0 24px 0;
       align-self: center;
     }
     .mobile-social>.social {
@@ -2471,6 +2473,7 @@ footer {
     }
 
     .mobile-nav-image-container {
+      margin-top: 35px;
       width: 100%;
       height: auto;
     }
@@ -2492,8 +2495,16 @@ footer {
   .mobile-nav-img-1,
   .mobile-nav-img-2,
   .mobile-nav-img-3 {
+    width: 95px;
+    height: 95px;
     display: inline-block;
-    margin: 0 20px 10px 10px;
+  }
+  .mobile-nav-img-1 img,
+  .mobile-nav-img-2 img,
+  .mobile-nav-img-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
   .welcome-container {
@@ -2501,6 +2512,10 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .welcome-text {
+    width: 100%;
   }
 
   .welcome-section h1 {
@@ -2527,6 +2542,8 @@ footer {
   .welcome-container .swiper-controls {
     width: 100%;
     justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .welcome-container .swiper-pagination-bullet {
@@ -2542,6 +2559,41 @@ footer {
     column-count: 2;
     column-gap: 24px;
   }
+
+
+  .video-player {
+    max-width: 380px;
+    min-height: 172px;
+    position: relative;
+  }
+
+  .video-controls {
+    width: 100%;
+    height: 55px;
+  }
+
+  .video-controls svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .playback-animation {
+    margin-left: -45px;
+    margin-top: -55px;
+  }
+
+  .playback-animation svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .video-progress {
+    position: absolute;
+    width: 380px;
+    height: 10px;
+    top: 0px;
+  }
+
 
   .gallery-img {
     width: 100%;
@@ -2567,16 +2619,44 @@ footer {
 .booking-overview {
   margin-top: 50px;
   margin-left: 0;
+  width: 360px;
+  height: 885px;
+}
+.credit-card {
+  position: static;
+}
+.card,
+.credit-card {
+  width: 330px;
+}
+
+.cvc-cw {
+  top: 0;
+  bottom: 125px;
+    left: 175px;
 }
 
 .tickets-workspace {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
+.tickets-type {
+  display: none;
+}
+.tickets-amount {
+   margin-top: 40px;
+  margin-left: 0px;
+}
+.tickets-image {
+  width: 380px;
+  height: 160px;
+}
   .tickets-image img {
-    width: 380px;
-    height: 160px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 .contacts-block {
   flex-direction: column;
@@ -2602,5 +2682,8 @@ footer {
   }
   .footer-school {
     display: none;
+  }
+  .social {
+    margin: 40px 0 40px 0;
   }
 }
