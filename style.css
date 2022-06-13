@@ -2554,6 +2554,12 @@ footer {
   .explore-text p {
     display: none;
   }
+
+  .explore-picture {
+    max-width: 380px;
+    min-height: 368px;
+  }
+
   .picture-inner-container {
     column-width: 178px;
     column-count: 2;
@@ -2622,6 +2628,13 @@ footer {
   width: 360px;
   height: 885px;
 }
+
+.credit-card-div {
+  width: 330px;
+  height: 443px;
+  align-self: center;
+}
+
 .credit-card {
   position: static;
 }
@@ -2631,9 +2644,27 @@ footer {
 }
 
 .cvc-cw {
-  top: 0;
-  bottom: 125px;
-    left: 175px;
+  top: 1410px;
+  left: 175px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-back {
+  padding: 0;
+}
+
+.magnet {
+  margin-left: 0px;
+  padding: 0;
+}
+.visa-mastercard {
+  top: 1135px;
+  left: 300px;
+}
+
+#cardholder-name {
+  width: 290px;
 }
 
 .tickets-workspace {
